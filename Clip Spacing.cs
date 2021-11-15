@@ -20,7 +20,7 @@ public class EntryPoint
             foreach (TrackEvent trackEvent in selected)
             {
                 // move clip start to the end of the previous one plus offset
-                trackEvent.AdjustStartLength(lastEnd + offset, trackEvent.Length, true);
+                trackEvent.AdjustStartLength(lastEnd + offset, trackEvent.Length, false);
                 lastEnd = trackEvent.End;
             }
 
